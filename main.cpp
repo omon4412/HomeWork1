@@ -1,9 +1,13 @@
 #include <iostream>
-
-using namespace std;
+#include "rwFunc.hpp"
+#include <clocale>
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    //setlocale(LC_ALL, "Russian");
+    Forest *fo = nullptr;
+
+    //ReadFile("DB/forest.db", fo);
+    WriteFile("DB/forest.db", fo);
     return 0;
 }

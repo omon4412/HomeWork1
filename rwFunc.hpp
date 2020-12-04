@@ -11,7 +11,8 @@ struct Forest
     double square;
 };
 
-void ReadFile();
-void WriteFile();
+void ReadFile(std::string fileName, Forest *&forest);
+
+void WriteFile(std::string fileName, Forest *forest);
 
 #endif // RWFUNC_HPP
