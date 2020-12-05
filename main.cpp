@@ -1,16 +1,14 @@
 #include <iostream>
-//#include <clocale>
+#include <locale>
 #include "rwFunc.hpp"
 #include "menu.hpp"
 
 int main()
 {
-    //setlocale(LC_ALL, "Russian");
+    setlocale(LC_ALL,"Russian_Russia.1251");
+
+    std::string path = "DB/forest.db";
     Forest *fo = nullptr;
 
-    ReadFile("DB/forest.db", fo);
-    WriteFile("DB/forest.db", fo);
-    Menu(fo);
-
-    return 0;
+    return Menu(fo, path);
 }
