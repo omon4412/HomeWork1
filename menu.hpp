@@ -8,5 +8,6 @@ void ShowData(Forest *forest, int size);
 Forest AddRequest();
 int DeleteRequest();
 void DrawLine();
+void ShowAbout();
 
 #endif // MENU_HPP

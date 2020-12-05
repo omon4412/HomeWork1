@@ -1,5 +1,6 @@
 #include <conio.h>
 #include <iomanip>
+#include <fstream>
 #include <windows.h>
 #include "rwFunc.hpp"
 #include "menu.hpp"
@@ -77,6 +78,8 @@ int Menu(Forest *forest, std::string path)
             _getch();
             break;
         case 54:
+            ShowAbout();
+            _getch();
             break;
         case 113: //q
             return EXIT_SUCCESS;
@@ -150,4 +153,23 @@ void DrawLine()
         std::cout<<'-';
     }
     std::cout << std::endl;
+}
+
+void ShowAbout()
+{
+    std::fstream about("about.txt", std::ios::in);
+
+    if(!about.is_open())
+    {
+        std::cerr << "Ôאיכ מ ןנמדנאללו םו םאיהום!";
+        _getch();
+        return;
+    }
+    std::string line;
+    std::cout << std::endl << "Î ןנמדנאללו:" << std::endl;
+    while(!about.eof())
+        {
+            getline(about, line);
+            std::cout << line << std::endl;
+        }
 }

@@ -40,8 +40,6 @@ void ReadFile(std::string fileName, Forest*& forest, int size)
 
 void WriteFile(std::string fileName, Forest *forest, int size)
 {
-    if(forest != nullptr)
-    {
         std::fstream out(fileName, std::ios_base::out);
 
         if (!out.is_open())
@@ -55,7 +53,6 @@ void WriteFile(std::string fileName, Forest *forest, int size)
         }
 
         out.close();
-    }
 }
 
 int LengthOfForest(std::string path)
