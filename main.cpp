@@ -8,7 +8,7 @@ int main()
     setlocale(LC_ALL,"Russian_Russia.1251");
 
     std::string path = "DB/forest.db";
-    Forest *fo;
+    Forest *fo = nullptr;
 
     return Menu(fo, path);
 }

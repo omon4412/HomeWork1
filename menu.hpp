@@ -9,5 +9,6 @@ Forest AddRequest();
 int DeleteRequest();
 void DrawLine();
 void ShowAbout();
+void ClearScreen();
 
 #endif // MENU_HPP

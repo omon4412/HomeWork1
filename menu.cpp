@@ -22,7 +22,7 @@ int Menu(Forest *forest, std::string path)
 
     while (true)
     {
-        system("cls");
+        ClearScreen();
         std::cout<<message;
         std::cout<<"Введите номер команды: ";
         std::cin >> n;
@@ -100,7 +100,7 @@ void ShowData(Forest *forest, int size)
         _getch();
         return;
     }
-     system("cls");
+     ClearScreen();
      std::cout << "| №     |" << std::setw(10) <<std::right << "№ участка |"
                << std::setw(15) << "Фамилия имя"
                << std::setw(31) << "| Площадь участка(га) |" << std::endl;
@@ -172,4 +172,13 @@ void ShowAbout()
             getline(about, line);
             std::cout << line << std::endl;
         }
+}
+
+void ClearScreen()
+{
+    #ifdef WIN32
+        std::system("cls");
+    #else
+        std::system ("clear");
+    #endif
 }
